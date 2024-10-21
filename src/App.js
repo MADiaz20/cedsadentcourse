@@ -9,14 +9,12 @@ const App = () => {
   const { user } = useContext(AuthContext);
 
   return (
-    <Router>
       <Routes>
         <Route path="/login" element={user ? <Navigate to={user.role === 'admin' ? "/admin" : "/client"} /> : <LoginPage />} />
         <Route path="/admin" element={user && user.role === 'admin' ? <AdminPage /> : <Navigate to="/login" />} />
         <Route path="/client" element={user && user.role === 'client' ? <ClientPage /> : <Navigate to="/login" />} />
         <Route path="*" element={<Navigate to="/login" />} /> {/* Redirigir cualquier ruta no encontrada a /login */}
       </Routes>
-    </Router>
   );
 };
 
