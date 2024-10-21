@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Navigate, Routes } from 'react-router-dom';
+import { AuthContext } from './components/AuthContext';
+import LoginPage from './pages/LoginPage';
+import AdminPage from './pages/AdminPage';
+import ClientPage from './pages/ClientPage';
 
-function App() {
+const App = () => {
+  const { user } = useContext(AuthContext);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/login" element={user ? <Navigate to={user.role === 'admin' ? "/admin" : "/client"} /> : <LoginPage />} />
+        <Route path="/admin" element={user && user.role === 'admin' ? <AdminPage /> : <Navigate to="/login" />} />
+        <Route path="/client" element={user && user.role === 'client' ? <ClientPage /> : <Navigate to="/login" />} />
+        <Route path="*" element={<Navigate to="/login" />} /> {/* Redirigir cualquier ruta no encontrada a /login */}
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
