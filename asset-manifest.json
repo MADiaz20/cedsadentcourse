@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "./static/css/main.e6c13ad2.css",
-    "main.js": "./static/js/main.69fa42c6.js",
-    "static/js/453.e19adfda.chunk.js": "./static/js/453.e19adfda.chunk.js",
-    "index.html": "./index.html",
-    "main.e6c13ad2.css.map": "./static/css/main.e6c13ad2.css.map",
-    "main.69fa42c6.js.map": "./static/js/main.69fa42c6.js.map",
-    "453.e19adfda.chunk.js.map": "./static/js/453.e19adfda.chunk.js.map"
+    "main.css": "/cedsadentcourse/static/css/main.e6c13ad2.css",
+    "main.js": "/cedsadentcourse/static/js/main.83a147fa.js",
+    "static/js/453.e19adfda.chunk.js": "/cedsadentcourse/static/js/453.e19adfda.chunk.js",
+    "index.html": "/cedsadentcourse/index.html",
+    "main.e6c13ad2.css.map": "/cedsadentcourse/static/css/main.e6c13ad2.css.map",
+    "main.83a147fa.js.map": "/cedsadentcourse/static/js/main.83a147fa.js.map",
+    "453.e19adfda.chunk.js.map": "/cedsadentcourse/static/js/453.e19adfda.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.69fa42c6.js"
+    "static/js/main.83a147fa.js"
   ]
 }
